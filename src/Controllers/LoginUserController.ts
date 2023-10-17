@@ -11,7 +11,7 @@ export class LoginUserController{
         const result = await service.execute({email, senha});
 
         if (result instanceof Error){
-            return response.status(400).json(result.message);
+            return response.status(200).json(result.message);
         }
 
         return response.json(result);

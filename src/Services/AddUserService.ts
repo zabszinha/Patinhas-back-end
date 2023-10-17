@@ -5,11 +5,11 @@ type UserRequest = {
     nome: string;
     email: string;
     senha: string;
-
+    tp_usu: boolean;
 }
 
 export class AddUserService {
-    async execute({nome, email, senha}:UserRequest): Promise< string | Error > {
+    async execute({nome, email, senha, tp_usu}:UserRequest): Promise< string | Error > {
         const repo = AppDataSource.getRepository(User);
 
 
@@ -21,7 +21,8 @@ export class AddUserService {
         const user = repo.create({
             nome,
             email,
-            senha
+            senha,
+            tp_usu
         })
 
 

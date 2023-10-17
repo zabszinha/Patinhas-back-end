@@ -1,17 +1,16 @@
 import { Entity, Column, CreateDateColumn, PrimaryColumn } from "typeorm";
-import { v4 as uuid } from "uuid";
 
-@Entity("cliente")
+@Entity("usuario")
 export class User {
 
     @PrimaryColumn()
-    id_cliente: number;
+    id_usu: number;
 
     @Column()
     nome: string;
 
     @Column()
-    cpf: string;
+    cpfcnpj: string;
 
     @CreateDateColumn()
     datanascimento: Date;
@@ -24,8 +23,8 @@ export class User {
 
     @Column()
     senha: string;
-    
 
+    @Column()
+    tp_usu: boolean;
     
-
 }
