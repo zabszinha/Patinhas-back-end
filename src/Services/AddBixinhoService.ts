@@ -20,11 +20,11 @@ export class AddBixinhoService {
         const bixinho = repo.create({
             nome,
             idade,
-            especie,
+            especie: "Golden",
             raca,
             porte,
             foto,
-            descricao,
+            descricao: "Brincalhão.",
             id_usu
         })
 
